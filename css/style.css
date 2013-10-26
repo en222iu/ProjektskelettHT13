@@ -46,3 +46,120 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+body {
+    font-family: verdana;
+    font-size: 12px;
+}
+
+h1, h2, h3 {
+    font-family: 'Times New Roman';
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2.5em;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+p {
+    margin: 10px 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+}
+
+section, article, nav {
+    margin: 10px;
+}
+
+footer {
+    height: 10px;
+}
+
+#container {
+    background: #333;
+    max-width: 950px;
+    min-width: 481px;
+    margin: 0 auto;
+}
+
+#container>header {
+    background: #000;
+    height: 50px;
+}
+
+nav {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    color: #000;
+    background: #FFF;
+    padding: 7px 15px;
+}
+
+@media screen and (max-width: 480px) {
+    
+    body {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    h2 {
+        font-size: 1.7em;
+    }
+    
+    h3 {
+        font-size: 1.5em;
+    }
+    
+    #container {
+        background: #555;
+        max-width: 480px;
+        min-width: 321px;
+    }
+    
+    nav {
+        width: 200px;
+        text-align: left;
+    }
+    
+    nav ul li {
+        display: block;
+        margin-bottom: 2px;
+    }
+    
+    nav ul li a {
+        display: block;
+        background: #fff;
+        padding: 12px 15px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    #container {
+    background: #777;
+    width: 320px;
+    }
+}
