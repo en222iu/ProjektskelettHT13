@@ -47,9 +47,14 @@ table {
 	border-spacing: 0;
 }
 
+
+/* slut på reset1111111!*/
+
 body {
+    background: #333;
     font-family: verdana;
     font-size: 12px;
+    line-height: 1.5;
 }
 
 h1, h2, h3 {
@@ -79,7 +84,7 @@ a {
 main {
 }
 
-section, article, nav {
+section, article {
     margin: 10px;
 }
 
@@ -88,7 +93,7 @@ footer {
 }
 
 #container {
-    background: #333;
+    background: #555;
     max-width: 950px;
     min-width: 481px;
     margin: 0 auto;
@@ -96,28 +101,87 @@ footer {
 
 #container>header {
     background: #000;
-    height: 50px;
+    height: 250px;
 }
 
 nav {
+    background: #000;
     text-align: center;
-    margin-bottom: 10px;
 }
 
 nav ul li {
     display: inline-block;
+    margin-bottom: 12px;
 }
 
 nav ul li a {
-    color: #000;
-    background: #FFF;
+    color: #990000;
+    background: #222222;
     padding: 7px 15px;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.active {
+    background: none;
+}
+
+form {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input {
+    margin: 5px 5px 20px 0;
+}
+
+textarea {
+    margin: 5px 0;
+}
+
+.submit {
+    font-weight: bold;
+}
+
+.album {
+    width: 625px;
+    margin: 0 auto;
+    border: 1px dotted #000;
+}
+
+.album h3 {
+    float: left;
+}
+
+.album img {
+    border: 1px solid #000;
+    float:right;
+}
+
+.musik {
+    clear: right;
+    border-bottom: 1px black dotted;
+    float: left;
+    font-size: 1.5em;  
+    margin: 5px;
+    width: 310px;
+}
+
+.audio {
+    clear: right;
+    margin-top: 4px;
+    
+}
+
+p {
+    margin: 10px;
 }
 
 @media screen and (max-width: 480px) {
     
     body {
-        font-size: 14px;
+        font-size: 15px;
         line-height: 1.5;
     }
     
@@ -134,13 +198,14 @@ nav ul li a {
     }
     
     #container {
-        background: #555;
         max-width: 480px;
         min-width: 321px;
     }
     
     nav {
-        width: 200px;
+        margin: 10px;
+        background: none;
+        width: 250px;
         text-align: left;
     }
     
@@ -151,15 +216,29 @@ nav ul li a {
     
     nav ul li a {
         display: block;
-        background: #fff;
+        color: #990000;
+        background: #222222;
         padding: 12px 15px;
+        font-size: 1.1em;
+    }
+    
+    .active {
+        text-align: right;
+        font-weight: bold;
+    }
+    
+    .musik {
+        float: none;
+    }
+    
+    audio {
+        margin-left: 10px;
     }
 }
 
 @media screen and (max-width: 320px) {
 
     #container {
-    background: #777;
     width: 320px;
     }
 }

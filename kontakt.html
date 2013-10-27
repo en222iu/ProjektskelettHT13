@@ -25,22 +25,15 @@
                 var meddelande = document.getElementById('meddelande');
                 
                 // Check each input in the order that it appears in the form!
-                if(notEmpty(firstname, "Please enter your first name")){
                     if(isAlphabet(firstname, "Please enter only letters for your name")){
-                        if(notEmpty(lastname, "Please enter your last name")){
-                            if(isAlphabet(lastname, "Please enter only letters for your name")){
-                                if(notEmpty(email, "Please enter your email address")){
-                                    if(emailValidator(email, "Please enter a valid email address")){
-                                        if(notEmpty(meddelande, "Please write a message")){
-                                            return true;
-                                        }
-                                    }
+                        if(isAlphabet(lastname, "Please enter only letters for your name")){
+                            if(emailValidator(email, "Please enter a valid email address")){
+                                if(notEmpty(meddelande, "Please write a message")){
+                                    return true;
                                 }
                             }
                         }
                     }
-                }
-	
 	return false;
 	
             function notEmpty(elem, helperMsg){
@@ -107,7 +100,7 @@
                 <li><a href="bandet.html">Om bandet</a></li>
                 <li><a href="medlemmar.html">Om medlemmarna</a></li>
                 <li><a href="media.html">Media</a></li>
-                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="kontakt.html" class="active">Kontakt</a></li>
             </ul>
         </nav>
         <main>
@@ -115,15 +108,15 @@
         <header><h1>Kontakt</h1></header>
             <form onsubmit='return formValidator()' autocomplete="on" name="kontaktform" id="kontaktform" method="post" 
                 action="http://voyager.lnu.se/tekinet/kurser/dtt/wp_webbintro/form.php">
-                First name:<br>
-                <input type='text' name="Förnamn" id='firstname' /><br>
-                Last name:<br>
-                <input type='text' name="Efternamn" id='lastname' /><br>
+                Förnamn:<br>
+                <input type='text' name="Förnamn" id='firstname' required/><br>
+                Efternamn:<br>
+                <input type='text' name="Efternamn" id='lastname' required/><br>
                 Email:<br>
-                <input type='text' name="Email" id='email'/><br>
+                <input type='email' name="Email" id='email'/><br>
                 Meddelande:<br>
                 <textarea name="Meddelande" id="meddelande" cols="30" rows="5"></textarea> <br>
-                <input type='submit' value='Skicka' /> <br />
+                <input class="submit" type='submit' value='Skicka!' />
             </form>
         </section>
         </main>
