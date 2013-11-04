@@ -120,7 +120,6 @@ img, video {
 
 #container>header {
     max-width: 950px;
-    width: 100%;
     height: 550px;
     background: #000 url('pics/logga.png') center no-repeat;
     background-size: contain;
@@ -162,6 +161,36 @@ nav ul li a {
 }
 #top>a>img {
     border: 0;
+}
+
+.scen {
+    border: 0;
+    padding-top: 10px;
+    margin: 0 auto;
+}
+
+/*YOUTUBE*/
+
+.embed-container { 
+    position: relative; 
+    padding-bottom: 56.25%; 
+    padding-top: 30px;
+    overflow: hidden; 
+    max-width: 100%; 
+    height: auto;
+    top: 10px;
+} 
+
+.embed-container iframe {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+}
+
+#video {
+    display: none;
 }
 
 /* Medlemmarna */
@@ -239,7 +268,6 @@ textarea {
 }
 
 .musik {
-    text-align: justify;
     clear: right;
     float: left;
     font-size: 1.4em;  
@@ -262,11 +290,11 @@ footer {
     font-weight: bold;
 }
 
-
-
 .fb-like {
+    padding-top: 10px;
     padding-left: 10px;
 }
+
 @media screen and (max-width: 480px) {
     
     body {
