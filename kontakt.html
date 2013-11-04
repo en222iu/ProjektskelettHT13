@@ -5,6 +5,8 @@
         <link rel="stylesheet" href="css/print.css" media="print">
         <link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Metal+Mania' rel='stylesheet' type='text/css'>
+        <link rel="shortcut icon" href="css/pics/favicon.ico">
+        <link rel="apple-touch-icon" href="css/pics/apple.png" />
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script> 
@@ -110,19 +112,27 @@
         <header><h1>Kontakt</h1></header>
             <form onsubmit='return formValidator()' autocomplete="on" name="kontaktform" id="kontaktform" method="post" 
                 action="http://voyager.lnu.se/tekinet/kurser/dtt/wp_webbintro/form.php">
-                Förnamn:<br>
+                
+                <label for="firstname">Förnamn:</label>
+                <br>
                 <input type='text' name="Förnamn" id='firstname' required/><br>
-                Efternamn:<br>
+                
+                <label for="lastname">Efternamn:</label>
+                <br>
                 <input type='text' name="Efternamn" id='lastname' required/><br>
-                Email:<br>
+                
+                <label for="email">Email:</label>
+                <br>
                 <input type='email' name="Email" id='email'/><br>
-                Meddelande:<br>
+                
+                <label for="meddelande">Meddelande:</label>
+                <br>
                 <textarea name="Meddelande" id="meddelande" cols="30" rows="5"></textarea> <br>
                 <input class="submit" type='submit' value='Skicka!' />
             </form>
         </section>
         </main>
-        <footer></footer>
+        <footer>OmEn &copy; 2013</footer>
     </div>
     </body>
 </html>

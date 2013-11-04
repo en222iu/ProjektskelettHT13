@@ -1,5 +1,3 @@
-
-
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -50,17 +48,21 @@ table {
 }
 
 
-/* slut pÃ¥ reset1111111!*/
+/* slut på reset*/
+
+html {
+    overflow-y: scroll;
+}
 
 body {
-    
-    background: #222;
+    background: #000 url('pics/bg.jpg') no-repeat fixed;
+    background-size: cover;
     font-family: verdana;
     font-size: 12px;
     line-height: 1.5;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4{
 font-family: 'Metal Mania', cursive;
 }
 
@@ -77,47 +79,60 @@ h3 {
     font-size: 2em;
 }
 
+h4{
+    font-size: 1.5em;
+}
+
 p {
     margin: 10px 0;
 }
 
 a {
-    text-decoration: none;
+    padding: 3px;
+    color: #222;
+    text-decoration: underline;
 }
 
 main {
+    background: #555;
+    margin-bottom: -10px;
 }
 
 section, article {
     margin: 10px;
 }
 
-footer {
-    clear: both;
-    height: 10px;
+img {
+    border: 2px solid #000;
+}
+
+img, video {
+    max-width:100%;
 }
 
 #container {
-    background: #555;
     max-width: 950px;
     min-width: 481px;
+    background: #000;
     margin: 0 auto;
     border: 10px solid #000;
 }
 
 #container>header {
-    background: #000;
-    height: 250px;
+    max-width: 950px;
+    width: 100%;
+    height: 550px;
+    background: #000 url('pics/logga.png') center no-repeat;
+    background-size: contain;
 }
 
-nav {
-    background: #000;
+nav {   
     text-align: center;
+    margin-bottom: -6px;
 }
 
 nav ul li {
     display: inline-block;
-    margin-bottom: 4px;
 }
 
 nav ul li a {
@@ -128,11 +143,25 @@ nav ul li a {
     font-family: 'Muli', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
+    text-decoration: none;
 }
 
 .active {
     background: #555;
     color: #770000;
+}
+
+#top {
+    padding-bottom: 10px;
+    clear: both;
+    max-width: 100%;
+    background: #555;
+    height: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+#top>a>img {
+    border: 0;
 }
 
 /* Medlemmarna */
@@ -148,7 +177,12 @@ p.right {
 
 p.left {
     float: left;
-    text-align:left;
+    text-align: left;
+}
+
+p.lastmember {
+    float: none;
+    padding-bottom: 10px;
 }
 
 img.right {
@@ -185,13 +219,14 @@ textarea {
 /* Media */
 
 .album {
-    width: 625px;
+    max-width: 625px;
+    width: 100%;
     margin: 0 auto;
     border: 1px dotted #000;
     padding: 10px;
 }
 
-.album h3 {
+.albumtext {
     float: left;
 }
 
@@ -199,12 +234,13 @@ textarea {
     border: 1px solid #000;
     float: right;
     margin-bottom:5px;
+    width: 300px;
+    height: 300px;
 }
 
 .musik {
     text-align: justify;
     clear: right;
-    border-bottom: 2px black dotted;
     float: left;
     font-size: 1.4em;  
     margin: 5px;
@@ -217,11 +253,26 @@ textarea {
     
 }
 
+footer {
+    clear: both;
+    max-width: 100%;
+    background: #555;
+    height: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+
+.fb-like {
+    padding-left: 10px;
+}
 @media screen and (max-width: 480px) {
     
     body {
         font-size: 15px;
         line-height: 1.5;
+        background-image: none;
     }
     
     h1 {
@@ -239,11 +290,18 @@ textarea {
     #container {
         max-width: 480px;
         min-width: 321px;
+        background: #555;
+        border: 0;
+    }
+    
+    #container>header {
+    height: 318px;
     }
     
     nav {
-        margin: 10px;
-        background: none;
+        margin: 0 auto;
+        margin-top: 10px;
+        background: #555;
         width: 275px;
         text-align: left;
     }
@@ -259,6 +317,7 @@ textarea {
         background: #222222;
         padding: 12px 15px;
         font-size: 1.1em;
+        border: 1px solid #000;
     }
     
     .active {
@@ -266,6 +325,7 @@ textarea {
         background: #222222;
         text-align: right;
         font-weight: bold;
+        font-size: 1.2em;
     }
     
     section>h2 {
@@ -285,13 +345,14 @@ textarea {
     }
     
     .album {
-        width: 460px;
+        max-width: 300px;
+        width: 100%;
         margin: 0 auto;
         border: 0;
         padding: 10px;
     }
     
-    .album h3 {
+    .albumtext {
         float: none;
     }
     
@@ -313,6 +374,10 @@ textarea {
     .musik {
         float: none;
     }
+
+    #top {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 320px) {
@@ -320,4 +385,9 @@ textarea {
     #container {
     width: 320px;
     }
+    
+    #container>header {
+    height: 212px;
+    }
+    
 }
